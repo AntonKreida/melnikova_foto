@@ -1,0 +1,20 @@
+# dependencies
+node_modules
+
+# public & assets
+public
+
+# husky
+.husky
+
+# next
+.next
+
+# tailwindcss
+tailwind.config.js
+
+# postcss
+postcss.config.js
+
+# prettier
+prettierrc.json
