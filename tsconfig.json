@@ -18,11 +18,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
   },
   "include": [
     "next-env.d.ts",
@@ -31,5 +26,6 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "extends": "./tsconfig.paths.json",
 }
