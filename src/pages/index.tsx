@@ -1,10 +1,5 @@
-import { Sidebar } from '@/layout';
-
-
 const Index = () => (
-  <div className="h-screen w-screen">
-    <Sidebar />
-  </div>
+  <div />
 );
 
 export default Index;

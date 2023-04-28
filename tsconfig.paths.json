@@ -13,6 +13,9 @@
             ],
             "@images/*": [
                 "./src/assets/*"
+            ],
+            "@lib": [
+                "./src/lib/"
             ]
         },
     },
