@@ -1,0 +1,9 @@
+li *:not(ul)  {
+    @apply cursor-pointer;
+    @apply hover:opacity-50
+}
+
+li:hover > svg {
+    @apply cursor-pointer;
+    @apply opacity-50
+}

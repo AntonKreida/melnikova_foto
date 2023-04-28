@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// BASE
+@import "./base/base.scss";
+@import "./base/typography.scss";
+
+// LAYOUT
+@import "./layout/list.scss";
+
+
+

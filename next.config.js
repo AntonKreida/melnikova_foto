@@ -10,6 +10,10 @@ const nextConfig = {
 
     return config;
   },
+  swcMinify: true,
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;
