@@ -1,0 +1,7 @@
+ul + li {
+    @apply cursor-pointer;
+}
+
+span {
+    @apply hover:opacity-50
+}

@@ -1,4 +1,5 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
+const plugin = require('tailwindcss/plugin')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -32,7 +33,20 @@ module.exports = {
     },
     letterSpacing: {
       subtitle: ".7em"
-    }
+    },
   },
-  plugins: [require('prettier-plugin-tailwindcss')],
+  plugins: [
+    require('prettier-plugin-tailwindcss'),
+    plugin(function({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hide::-webkit-scrollbar': {
+          'display': 'none'
+        },
+        '.scrollbar-hide': {
+          '-ms-overflow-style': 'none', 
+          'scrollbar-width': 'none'
+        }
+      })
+    })
+  ],
 };

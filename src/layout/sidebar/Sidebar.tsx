@@ -5,9 +5,9 @@ import { Contacts } from './contacts';
 
 
 export const Sidebar = () => (
-  <aside className="fixed left-0 top-0 h-full w-5/12">
-    <div className="flex h-full w-full px-16 py-32">
-      <div className="flex flex-col justify-between">
+  <aside className="fixed left-0 top-0 h-full w-1/4 overflow-y-scroll scrollbar-hide">
+    <div className="flex w-full px-16 py-32">
+      <div className="flex flex-col gap-16">
 
         <div className="flex flex-col gap-16">
           <div className="flex flex-col gap-2">
