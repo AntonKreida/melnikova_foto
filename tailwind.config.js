@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -21,10 +23,15 @@ module.exports = {
       default: ['Gabriela'],
       light: ['FuturaPT-Light'],
       cold: ['FuturaPT-BookCold'],
-      book: ['FuturaPT-Book']
+      book: ['FuturaPT-Book'],
+      demi: ['FuturaPT-Demi'],
     },
     fontSize: {
       title: ['32px', '41px'],
+      ...defaultTheme.fontSize,
+    },
+    letterSpacing: {
+      subtitle: ".7em"
     }
   },
   plugins: [require('prettier-plugin-tailwindcss')],

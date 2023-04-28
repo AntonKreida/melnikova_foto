@@ -11,6 +11,9 @@
             "@layout/*": [
                 "./src/layout/*"
             ],
+            "@images/*": [
+                "./src/assets/*"
+            ]
         },
     },
 }
