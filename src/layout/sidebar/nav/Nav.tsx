@@ -41,7 +41,7 @@ export const Nav: FC<IProps> = ({ navList }) => {
 
   return (
     <nav>
-      <ul className="flex w-fit flex-col gap-8 font-book text-sm uppercase">
+      <ul className="flex w-fit flex-col gap-8 font-book text-sm uppercase md:gap-6 md:text-xs">
         { navList.map((item) => {
           if (!item.subNavList) {
             return (
@@ -60,14 +60,17 @@ export const Nav: FC<IProps> = ({ navList }) => {
           }
 
           return (
-            <li key={ item.id } className="relative flex flex-col">
+            <li
+              key={ item.id }
+              className="relative flex flex-col"
+              role="menuitem"
+              tabIndex={ 0 }
+              onClick={ handlerOpenSubmenu }
+              onKeyDown={ handlerKeyDownSubmenu }
+            >
               <span
-                role="menuitem"
-                tabIndex={ 0 }
                 className={ `w-fit ${isOpenSubmenu
-                  && 'opacity-50 before:absolute before:left-[-10px] before:top-0 before:h-[20px] before:w-1 before:bg-black+ before:opacity-50'}` }
-                onClick={ handlerOpenSubmenu }
-                onKeyDown={ handlerKeyDownSubmenu }
+                  && 'opacity-50 before:absolute before:left-[-10px] before:top-0 before:h-[20px] before:w-1 before:bg-black+ before:opacity-50 md:before:h-[12px]'}` }
               >
                 { item.name }
               </span>
@@ -75,7 +78,7 @@ export const Nav: FC<IProps> = ({ navList }) => {
               <AnimatePresence>
                 <motion.ul
                   animate={ isOpenSubmenu ? { height: 'auto', opacity: 1, marginTop: 30 } : { height: 0, opacity: 0, marginTop: 0 } }
-                  className="flex h-0 flex-col gap-6 overflow-hidden pl-4"
+                  className="flex h-0 flex-col gap-6 overflow-hidden pl-4 md:gap-3"
                   initial={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -90,10 +93,9 @@ export const Nav: FC<IProps> = ({ navList }) => {
                     </li>
                   )) }
                 </motion.ul>
-                )
               </AnimatePresence>
 
-              <Shape className={ `absolute right-[75px] top-0 translate-y-1/2 transition ${isOpenSubmenu && 'rotate-90 opacity-50'}` } />
+              <Shape className={ `absolute right-[75px] top-0 translate-y-1/2 transition md:right-[35px] md:translate-y-[10%] ${isOpenSubmenu && 'rotate-90 opacity-50'}` } />
             </li>
           );
         }) }

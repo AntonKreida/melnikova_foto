@@ -28,8 +28,11 @@ module.exports = {
       demi: ['FuturaPT-Demi'],
     },
     fontSize: {
-      title: ['32px', '41px'],
       ...defaultTheme.fontSize,
+      xs: ['8px', '12px'],
+      base: ['12px', '16px'],
+      md: ['20px', '28px'],
+      lg: ['32px', '40px'],
     },
     letterSpacing: {
       subtitle: ".7em"
