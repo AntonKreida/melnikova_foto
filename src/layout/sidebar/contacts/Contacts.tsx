@@ -1,6 +1,7 @@
 import VK from '@images/icon/vk.svg';
 import Telegram from '@images/icon/telegram.svg';
 import Whatsapp from '@images/icon/viber.svg';
+import { Button } from '@/ui-kit';
 
 
 export const Contacts = () => (
@@ -21,5 +22,6 @@ export const Contacts = () => (
         <Whatsapp className="h-[20px] w-[20px] md:h-[15px] md:w-[15px]" />
       </a>
     </div>
+    <Button text="Связаться со мной" />
   </div>
 );

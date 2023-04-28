@@ -8,6 +8,7 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/layout/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/ui-kit/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     screens: {
@@ -19,6 +20,8 @@ module.exports = {
     colors: {
       "black+": "#333333",
       "gray+": "#D9D9D9",
+      "grayL": "#D6CFCE",
+      ...defaultTheme.colors,
     },
     fontFamily: {
       default: ['Gabriela'],

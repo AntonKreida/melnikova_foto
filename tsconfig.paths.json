@@ -16,6 +16,9 @@
             ],
             "@lib": [
                 "./src/lib/"
+            ],
+            "@ui-kit": [
+                "./src/ui-kit/"
             ]
         },
     },
