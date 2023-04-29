@@ -1,14 +1,14 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import '@/styles/main.scss';
-import { Main } from '@layout';
+import { Container } from '@layout';
 
 import type { AppProps } from 'next/app';
 
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Main>
+  <Container>
     <Component { ...pageProps } />
-  </Main>
+  </Container>
 );
 
 export default MyApp;

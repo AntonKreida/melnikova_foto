@@ -5,7 +5,7 @@ import { Button } from '@/ui-kit';
 
 
 export const Contacts = () => (
-  <div className="flex flex-col gap-6">
+  <div className="mt-8 flex flex-col gap-6">
 
     <a className="font-book text-sm uppercase md:text-xs" href="tel:89220070075">
       +7 (922) 007-00-75
