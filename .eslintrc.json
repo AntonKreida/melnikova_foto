@@ -15,7 +15,7 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:tailwindcss/recommended"
   ],
-   //
+  //
   // PLUGINS
   //
   "plugins": [
@@ -64,9 +64,6 @@
       "typescript": {
         "project": "./tsconfig.json",
         "alwaysTryTypes": true
-      },
-      "tailwindcss": {
-        "config": "./tailwind.config.js"
       }
     },
     "import/parsers": {
