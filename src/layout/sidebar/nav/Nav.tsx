@@ -1,11 +1,9 @@
-/* eslint-disable tailwindcss/no-custom-classname */
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
   FC, useState, KeyboardEvent, useRef
 } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import Shape from '@images/icon/shape.svg';
 
 

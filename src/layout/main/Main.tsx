@@ -1,16 +1,17 @@
 import { FC } from 'react';
 
-import { Sidebar } from '@layout/sidebar';
+import { Header } from '../header';
 
 
 interface IProps {
   children: JSX.Element | JSX.Element[] | string;
 }
 
-
 export const Main: FC<IProps> = ({ children }) => (
-  <div className="h-screen w-screen">
-    <Sidebar />
-    { children }
-  </div>
+  <main className="ml-[25%] flex h-full w-full flex-col overflow-hidden pb-5 pl-12 pt-40">
+    <div className="flex h-full flex-col gap-16">
+      <Header title="Профессиональная фотосъёмка в Тюмени" />
+      { children }
+    </div>
+  </main>
 );

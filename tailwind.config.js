@@ -21,7 +21,7 @@ module.exports = {
       "black+": "#333333",
       "gray+": "#D9D9D9",
       "grayL": "#D6CFCE",
-      ...defaultTheme.colors,
+      "with": "#FFFFFF",
     },
     fontFamily: {
       default: ['Gabriela'],
@@ -29,6 +29,7 @@ module.exports = {
       cold: ['FuturaPT-BookCold'],
       book: ['FuturaPT-Book'],
       demi: ['FuturaPT-Demi'],
+      med: ['FuturaPT-Medium'],
     },
     fontSize: {
       ...defaultTheme.fontSize,
@@ -36,6 +37,8 @@ module.exports = {
       base: ['12px', '16px'],
       md: ['20px', '28px'],
       lg: ['32px', '40px'],
+      xl: ['36px', '46px'],
+      sub: ['24px', '20px'],
     },
     letterSpacing: {
       subtitle: ".7em"

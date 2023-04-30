@@ -11,8 +11,11 @@
             "@layout/*": [
                 "./src/layout/*"
             ],
-            "@images/*": [
+            "@assets/*": [
                 "./src/assets/*"
+            ],
+            "@public/*": [
+                "./public/*"
             ],
             "@lib": [
                 "./src/lib/"

@@ -1,11 +1,11 @@
-import VK from '@images/icon/vk.svg';
-import Telegram from '@images/icon/telegram.svg';
-import Whatsapp from '@images/icon/viber.svg';
+import VK from '@assets/icon/vk.svg';
+import Telegram from '@assets/icon/telegram.svg';
+import Whatsapp from '@assets/icon/viber.svg';
 import { Button } from '@/ui-kit';
 
 
 export const Contacts = () => (
-  <div className="flex flex-col gap-6">
+  <div className="mt-8 flex flex-col gap-6">
 
     <a className="font-book text-sm uppercase md:text-xs" href="tel:89220070075">
       +7 (922) 007-00-75

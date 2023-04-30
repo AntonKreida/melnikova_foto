@@ -7,14 +7,14 @@ import { Contacts } from './contacts';
 
 
 export const Sidebar = () => (
-  <aside className="fixed left-0 top-0 z-10 h-full w-1/4 overflow-y-scroll shadow-custom scrollbar-hide">
-    <div className="flex w-full px-16 py-32 md:px-8">
-      <div className="flex flex-col gap-16 md:gap-12">
+  <aside className="fixed h-screen w-[25%] overflow-y-scroll px-16 pb-5 pt-32 shadow-custom scrollbar-hide md:px-8">
+    <div className="flex h-auto w-full">
+      <div className="flex h-auto w-full flex-col justify-between md:gap-12">
 
-        <div className="flex flex-col gap-16 md:gap-8">
+        <div className="flex h-full w-full flex-col gap-16 md:gap-8">
           <Link className="flex flex-col gap-2" href="/">
             <h1 className="font-default text-lg uppercase text-black+ md:text-md">
-              Александра Мельникова
+              Александра  <br />Мельникова
             </h1>
             <h2 className="font-default text-base uppercase tracking-subtitle text-black+ opacity-50 md:text-xs">
               PHOTOGRAPHER
