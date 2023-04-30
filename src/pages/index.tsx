@@ -33,7 +33,7 @@ const Index = () => {
               className="h-fit w-fit cursor-pointer justify-end"
               href={ `${slide.path}` }
             >
-              <div className="mb-11 font-med text-lg text-with transition-all hover:text-gray+ active:scale-[0.9]">{ slide.name }</div>
+              <div className="mb-11 font-med text-lg text-with transition-all hover:text-gray+ active:scale-[0.9] md:text-md">{ slide.name }</div>
             </Link>
           </motion.div>
         )) }
