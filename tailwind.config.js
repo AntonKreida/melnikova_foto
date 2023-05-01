@@ -4,24 +4,22 @@ const plugin = require('tailwindcss/plugin')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/layout/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/ui-kit/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     screens: {
       sm: {"min": "0px", "max": "767px"},
-      md: {"min": "768px", "max": "1279px"},
-      lg: {"min": "1280px", "max": "1599px"},
-      xl: {"min": "1600px"},    
+      md: {"min": "768px", "max": "1399px"},
+      lg: {"min": "1440px", "max": "1599px"},
+      xl: {"min": "1600px"},  
     },
-    colors: {
-      "black+": "#333333",
-      "gray+": "#D9D9D9",
-      "grayL": "#D6CFCE",
-      "with": "#FFFFFF",
+    extend: {
+      colors: {
+        "black+": "#333333",
+        "gray+": "#D9D9D9",
+        "grayL": "#D6CFCE",
+        "with": "#FFFFFF",
+      },
     },
     fontFamily: {
       default: ['Gabriela'],
@@ -35,10 +33,11 @@ module.exports = {
       ...defaultTheme.fontSize,
       xs: ['8px', '12px'],
       base: ['12px', '16px'],
-      md: ['20px', '28px'],
+      md: ['18px', '20px'],
       lg: ['32px', '40px'],
       xl: ['36px', '46px'],
       sub: ['24px', '20px'],
+      liBase: ['14px', '16px']
     },
     letterSpacing: {
       subtitle: ".7em"

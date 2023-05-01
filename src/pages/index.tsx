@@ -16,24 +16,24 @@ const Index = () => {
   }, []);
 
   return (
-    <motion.div className="h-full w-[110%]">
+    <motion.div className="h-full w-[115%]">
       <motion.div
         ref={ carousel }
         className="flex h-full cursor-grab gap-5"
         drag="x"
-        dragConstraints={{ right: 0, left: -width }}
+        dragConstraints={{ right: 0, left: -width - 200 }}
       >
         { slides.map((slide) => (
           <motion.div
             key={ slide.id }
-            className="flex h-full w-1/3 cursor-grab flex-col items-center justify-end bg-cover bg-no-repeat"
+            className="flex h-full w-full cursor-grab flex-col items-center justify-end bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${slide.src})` }}
           >
             <Link
               className="h-fit w-fit cursor-pointer justify-end"
               href={ `${slide.path}` }
             >
-              <div className="mb-11 font-med text-lg text-with transition-all hover:text-gray+ active:scale-[0.9]">{ slide.name }</div>
+              <div className="mb-11 font-med text-lg text-with transition-all hover:text-gray+ active:scale-[0.9] md:text-md">{ slide.name }</div>
             </Link>
           </motion.div>
         )) }
