@@ -4,7 +4,8 @@ import {
   FC, useState, KeyboardEvent, useRef
 } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Shape from '@images/icon/shape.svg';
+
+import Shape from '@assets/icon/shape.svg';
 
 
 interface IProps {
