@@ -7,7 +7,7 @@ import { Contacts } from './contacts';
 
 
 export const Sidebar = () => (
-  <aside className="fixed h-screen w-[25%] overflow-y-scroll px-16 pb-5 pt-32 shadow-custom scrollbar-hide md:px-8">
+  <aside className="fixed h-screen w-[25%] overflow-y-scroll px-16 pb-12 pt-32 shadow-custom scrollbar-hide md:px-8">
     <div className="flex h-full w-full">
       <div className="flex h-full w-full flex-col justify-between md:gap-12">
 
