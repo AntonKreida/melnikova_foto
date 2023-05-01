@@ -9,8 +9,8 @@ module.exports = {
   theme: {
     screens: {
       sm: {"min": "0px", "max": "767px"},
-      md: {"min": "768px", "max": "1279px"},
-      lg: {"min": "1280px", "max": "1599px"},
+      md: {"min": "768px", "max": "1399px"},
+      lg: {"min": "1440px", "max": "1599px"},
       xl: {"min": "1600px"},  
     },
     extend: {
@@ -33,11 +33,11 @@ module.exports = {
       ...defaultTheme.fontSize,
       xs: ['8px', '12px'],
       base: ['12px', '16px'],
-      md: ['20px', '28px'],
+      md: ['18px', '20px'],
       lg: ['32px', '40px'],
       xl: ['36px', '46px'],
       sub: ['24px', '20px'],
-      liBase: ['16px', '24px']
+      liBase: ['14px', '16px']
     },
     letterSpacing: {
       subtitle: ".7em"

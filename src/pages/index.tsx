@@ -26,7 +26,7 @@ const Index = () => {
         { slides.map((slide) => (
           <motion.div
             key={ slide.id }
-            className="flex h-full w-1/3 cursor-grab flex-col items-center justify-end bg-cover bg-no-repeat"
+            className="flex h-full w-full cursor-grab flex-col items-center justify-end bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${slide.src})` }}
           >
             <Link
