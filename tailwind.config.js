@@ -4,11 +4,7 @@ const plugin = require('tailwindcss/plugin')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/layout/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/ui-kit/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     screens: {
@@ -17,11 +13,13 @@ module.exports = {
       lg: {"min": "1280px", "max": "1599px"},
       xl: {"min": "1600px"},    
     },
-    colors: {
-      "black+": "#333333",
-      "gray+": "#D9D9D9",
-      "grayL": "#D6CFCE",
-      "with": "#FFFFFF",
+    extend: {
+      colors: {
+        "black+": "#333333",
+        "gray+": "#D9D9D9",
+        "grayL": "#D6CFCE",
+        "with": "#FFFFFF",
+      },
     },
     fontFamily: {
       default: ['Gabriela'],
