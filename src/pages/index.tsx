@@ -16,12 +16,12 @@ const Index = () => {
   }, []);
 
   return (
-    <motion.div className="h-full w-[110%]">
+    <motion.div className="h-full w-[115%]">
       <motion.div
         ref={ carousel }
         className="flex h-full cursor-grab gap-5"
         drag="x"
-        dragConstraints={{ right: 0, left: -width }}
+        dragConstraints={{ right: 0, left: -width - 200 }}
       >
         { slides.map((slide) => (
           <motion.div

@@ -11,7 +11,7 @@ module.exports = {
       sm: {"min": "0px", "max": "767px"},
       md: {"min": "768px", "max": "1279px"},
       lg: {"min": "1280px", "max": "1599px"},
-      xl: {"min": "1600px"},    
+      xl: {"min": "1600px"},  
     },
     extend: {
       colors: {
