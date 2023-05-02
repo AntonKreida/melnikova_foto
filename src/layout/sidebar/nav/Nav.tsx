@@ -76,7 +76,7 @@ export const Nav: FC<IProps> = ({ navList }) => {
             >
               <span
                 className={ `w-fit ${isOpenSubmenu
-                  && 'list-before opacity-50 md:before:h-[12px]'}` }
+                  && 'list-before opacity-50 before:h-[20px] md:before:h-[12px]'}` }
               >
                 { item.name }
               </span>

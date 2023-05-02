@@ -1,2 +1,2 @@
 export * from './nav';
-export * from './HeaderTitle';
+export * from './headerTitle';

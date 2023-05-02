@@ -4,12 +4,13 @@ import { FC } from 'react';
 interface IProps {
   title: string;
   subtitle?: string;
+  path?: boolean;
 }
 
 
-export const Header: FC<IProps> = ({ title, subtitle }) => (
+export const Header: FC<IProps> = ({ title, subtitle, path }) => (
   <header className="flex justify-between">
-    <h1 className="font-default text-xl uppercase text-black+">
+    <h1 className={ `font-default text-xl text-black+ ${path ? 'normal-case' : 'uppercase'}` }>
       { title }
     </h1>
     { subtitle && (
