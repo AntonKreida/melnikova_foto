@@ -1,7 +1,8 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
-  FC, useState, KeyboardEvent, useRef
+  FC, useState, KeyboardEvent, useRef,
 } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -28,7 +29,13 @@ export const Nav: FC<IProps> = ({ navList }) => {
   const ref = useRef<HTMLElement>();
 
 
-  const handlerOpenSubmenu = () => {
+  const handlerOpenSubmenu = (event: React.MouseEvent<HTMLElement>) => {
+    const target = event.target as HTMLElement;
+
+    if (target.classList.contains('itemSubmenu')) {
+      event.preventDefault();
+      return;
+    }
     setIsOpenSubmenu(!isOpenSubmenu);
   };
 
@@ -49,7 +56,7 @@ export const Nav: FC<IProps> = ({ navList }) => {
                   <Link href={ item.path ? `${item.path}` : '' }>
                     <span
                       className={ `relative ${router.pathname === item.path
-                        && 'opacity-50 before:absolute before:left-[-10px] before:top-0 before:h-full before:w-1 before:bg-black+ before:opacity-50'}` }
+                        && 'list-before opacity-50'}` }
                     >{ item.name }
                     </span>
                   </Link>
@@ -69,7 +76,7 @@ export const Nav: FC<IProps> = ({ navList }) => {
             >
               <span
                 className={ `w-fit ${isOpenSubmenu
-                  && 'opacity-50 before:absolute before:left-[-10px] before:top-0 before:h-[20px] before:w-1 before:bg-black+ before:opacity-50 md:before:h-[12px]'}` }
+                  && 'list-before opacity-50 md:before:h-[12px]'}` }
               >
                 { item.name }
               </span>
@@ -85,7 +92,7 @@ export const Nav: FC<IProps> = ({ navList }) => {
                     <li key={ subItem.id }>
                       <Link href={ subItem.path }>
                         <span className={ `relative ${router.pathname === item.path
-                          && 'opacity-50 before:absolute before:left-[-10px] before:top-0 before:h-full before:w-1 before:bg-black+ before:opacity-50'}` }
+                          && 'list-before opacity-50'} itemSubmenu` }
                         >{ subItem.name }
                         </span>
                       </Link>
