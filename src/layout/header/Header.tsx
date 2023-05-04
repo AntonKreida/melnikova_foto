@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 interface IProps {
   title: string;
-  subtitle?: string;
+  subtitle?: string ;
   path?: boolean;
 }
 

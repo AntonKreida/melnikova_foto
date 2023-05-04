@@ -5,7 +5,8 @@
   "scripts": {
     "client": "cross-env NODE_ENV=development && next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "server": "npm run strapi develop --prefix backend",
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix",
     "eslint": "concurrently \"npm run lint\" \"npm run lint -- --fix\"",
@@ -52,11 +53,6 @@
       ">0.2%",
       "not dead",
       "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
     ]
   }
 }

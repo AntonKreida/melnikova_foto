@@ -23,7 +23,7 @@ const listItems = [
 const About = () => (
   <div className="flex h-full gap-10 overflow-hidden pr-[30%]">
     <div className="h-full w-full max-w-full">
-      <Image priority alt="Александра Мельникова" className="h-full w-[471px] object-cover" src={ AboutImg } />
+      <Image priority alt="Александра Мельникова" className="h-full w-[471px] object-cover" property="" src={ AboutImg } />
     </div>
     <div className="flex h-full w-full flex-col">
 
