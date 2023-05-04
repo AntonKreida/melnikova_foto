@@ -44,7 +44,7 @@ const About = () => (
           <p className="text-md font-light text-black+ md:text-liBase">Честно? Они помогли мне реализовать три потребности:</p>
           <ul className="flex flex-col text-md font-light text-black+ md:text-liBase">
             { listItems.map((item) => (
-              <li key={ item.id } className="relative left-[20px] inline-block before:absolute before:left-[-20px] before:top-0 before:block before:h-[15px] before:w-[15px] before:translate-y-[50%] before:bg-[url('/assets/icon/like.svg')] before:bg-no-repeat md:text-liBase">
+              <li key={ item.id } className="relative left-[20px] inline-block before:absolute before:left-[-20px] before:top-0 before:block before:h-[15px] before:w-[15px] before:translate-y-[25%] before:bg-[url('/assets/icon/like.svg')] before:bg-no-repeat md:text-liBase">
                 { item.text }
               </li>
             )) }
