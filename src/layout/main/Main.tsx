@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useRouter } from 'next/router';
 
-import { HeaderTitles, IHeaderTitles } from '@/lib';
+import { HeaderTitles, IHeaderTitles } from '@lib';
 
 import { Header } from '../header';
 

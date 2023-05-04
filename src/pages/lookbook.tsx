@@ -1,5 +1,5 @@
 const Lookbook = () => (
-  <div />
+  <div className="h-full w-full pr-[60px]" />
 );
 
 export default Lookbook;
