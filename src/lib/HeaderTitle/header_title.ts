@@ -14,7 +14,7 @@ export interface IHeaderTitles {
 }
 
 
-export const HeaderTitles: IHeaderTitles = {
+export const headerTitles: IHeaderTitles = {
   default: {
     title: 'Профессиональная фотосъемка в Тюмени',
     subtitle: '',

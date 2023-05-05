@@ -1,7 +1,8 @@
+/* eslint-disable max-len */
 import { FC } from 'react';
 import { useRouter } from 'next/router';
 
-import { HeaderTitles, IHeaderTitles } from '@lib';
+import { IHeaderTitles, headerTitles } from '@lib';
 
 import { Header } from '../header';
 
@@ -14,7 +15,8 @@ export const Main: FC<IProps> = ({ children }) => {
   const params = useRouter();
   const path = params.pathname.replace('/', '');
 
-  const titles = path ? HeaderTitles[path as keyof IHeaderTitles] : HeaderTitles.default;
+
+  const titles = headerTitles[path as keyof IHeaderTitles] !== undefined ? headerTitles[path as keyof IHeaderTitles] : headerTitles.default;
 
   const getNormalCase = () => {
     if (path === 'lookbook') {
