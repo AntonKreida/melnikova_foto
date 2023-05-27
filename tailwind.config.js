@@ -48,16 +48,6 @@ module.exports = {
   },
   plugins: [
     require('prettier-plugin-tailwindcss'),
-    plugin(function({ addUtilities }) {
-      addUtilities({
-        '.scrollbar-hide::-webkit-scrollbar': {
-          'display': 'none'
-        },
-        '.scrollbar-hide': {
-          '-ms-overflow-style': 'none', 
-          'scrollbar-width': 'none'
-        }
-      })
-    })
+    require('tailwind-scrollbar')({ nocompatible: true }),
   ],
 };
