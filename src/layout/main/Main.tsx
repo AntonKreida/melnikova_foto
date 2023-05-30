@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { FC } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 import { headerTitles, IHeaderTitles } from '@lib';
@@ -15,9 +15,19 @@ interface IProps {
 export const Main: FC<IProps> = ({ children }) => {
   const params = useRouter();
   const path = params.pathname.replace('/', '');
-
-
   const titles = headerTitles[path as keyof IHeaderTitles] !== undefined ? headerTitles[path as keyof IHeaderTitles] : headerTitles.default;
+
+  const [backToUpButton, setBackToUpButton] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY < 100) {
+        setBackToUpButton(true);
+      } else {
+        setBackToUpButton(false);
+      }
+    });
+  }, []);
 
   const getNormalCase = () => {
     if (path === 'lookbook') {
@@ -28,7 +38,10 @@ export const Main: FC<IProps> = ({ children }) => {
   };
 
   const handlerClickUpScrollPage = () => {
-    console.log('клик');
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   return (
@@ -36,7 +49,7 @@ export const Main: FC<IProps> = ({ children }) => {
       <div className="relative flex h-full flex-col gap-16">
         <Header path={ getNormalCase() } subtitle={ titles.subtitle } title={ titles.title } />
         { children }
-        <ButtonUp text="Назад" onClick={ handlerClickUpScrollPage } />
+        { backToUpButton && <ButtonUp text="Назад" onClick={ handlerClickUpScrollPage } /> }
       </div>
 
     </main>
