@@ -32,7 +32,7 @@ export const Nav: FC<IProps> = ({ navList }) => {
   const handlerOpenSubmenu = (event: React.MouseEvent<HTMLElement>) => {
     const target = event.target as HTMLElement;
 
-    if (target.classList.contains('itemSubmenu')) {
+    if (target.classList.contains('js-item')) {
       event.preventDefault();
       return;
     }
@@ -91,8 +91,8 @@ export const Nav: FC<IProps> = ({ navList }) => {
                   { item.subNavList.map((subItem) => (
                     <li key={ subItem.id }>
                       <Link href={ subItem.path }>
-                        <span className={ `relative ${router.pathname === item.path
-                          && 'list-before opacity-50'} itemSubmenu` }
+                        <span className={ `relative ${router.pathname === subItem.path
+                          && 'list-before opacity-50'} js-item` }
                         >{ subItem.name }
                         </span>
                       </Link>
