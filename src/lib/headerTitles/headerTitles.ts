@@ -24,7 +24,7 @@ export const headerTitles: IHeaderTitles = {
     subtitle: '',
   },
   lookbook: {
-    title: 'Лукбук для модельного агентства LIBERTY',
+    title: 'Лукбуки для модельного агентства',
     subtitle: '',
   },
 };

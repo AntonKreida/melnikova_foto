@@ -3,19 +3,20 @@ import { FC, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 import { headerTitles, IHeaderTitles } from '@lib';
-import { ButtonUp } from '@ui-kit';
+import { ButtonUp } from '@shared';
 
 import { Header } from '../header';
 
 
 interface IProps {
   children: JSX.Element | JSX.Element[] | string;
+  titlePage?: string;
 }
 
-export const Main: FC<IProps> = ({ children }) => {
+export const Main: FC<IProps> = ({ children, titlePage }) => {
   const params = useRouter();
   const path = params.pathname.replace('/', '');
-  const titles = headerTitles[path as keyof IHeaderTitles] !== undefined ? headerTitles[path as keyof IHeaderTitles] : headerTitles.default;
+  const titlesPaths = headerTitles[path as keyof IHeaderTitles] !== undefined ? headerTitles[path as keyof IHeaderTitles] : headerTitles.default;
 
   const [backToUpButton, setBackToUpButton] = useState(false);
 
@@ -47,7 +48,11 @@ export const Main: FC<IProps> = ({ children }) => {
   return (
     <main className="ml-[25%] flex h-full w-full flex-col overflow-hidden pb-14 pl-12 pt-40">
       <div className="relative flex h-full flex-col gap-16">
-        <Header path={ getNormalCase() } subtitle={ titles.subtitle } title={ titles.title } />
+        <Header
+          path={ getNormalCase() }
+          subtitle={ titlesPaths.subtitle }
+          title={ titlePage || titlesPaths.title }
+        />
         { children }
         { backToUpButton && <ButtonUp text="Назад" onClick={ handlerClickUpScrollPage } /> }
       </div>

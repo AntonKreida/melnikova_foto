@@ -1,7 +1,7 @@
 import VK from '@assets/icon/vk.svg';
 import Telegram from '@assets/icon/telegram.svg';
 import Whatsapp from '@assets/icon/viber.svg';
-import { Button } from '@/ui-kit';
+import { Button } from '@shared';
 
 
 export const Contacts = () => (

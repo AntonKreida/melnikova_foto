@@ -273,6 +273,11 @@
         "warnOnUnassignedImports": true
       }
     ],
+    // https://eslint.org/docs/latest/rules/no-restricted-exports
+    "no-restricted-exports": [
+      1,
+      { "restrictDefaultExports": { "defaultFrom": false } }
+    ],
     // https://eslint.org/docs/latest/rules/sort-imports
     //    "sort-imports": [
     //      1,
