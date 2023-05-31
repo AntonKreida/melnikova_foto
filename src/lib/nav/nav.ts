@@ -20,28 +20,23 @@ export const navList = [
       },
       {
         id: 5,
-        name: 'Предметное фото',
-        path: '/subject'
-      },
-      {
-        id: 6,
         name: 'Бьюти съемка',
         path: '/beauty'
       },
     ],
   },
   {
-    id: 7,
+    id: 6,
     name: 'Для блогов и экспертов',
     path: '/blog',
   },
   {
-    id: 8,
+    id: 7,
     name: 'Личные фотосессии',
     path: '/photoshoot',
   },
   {
-    id: 9,
+    id: 8,
     name: 'Публикации в журналах',
     path: '/publications',
   },
