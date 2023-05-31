@@ -8,8 +8,8 @@ interface IProps {
 }
 
 
-export const Header: FC<IProps> = ({ title, subtitle, path }) => (
-  <header className="flex justify-between">
+export const HeaderTitles: FC<IProps> = ({ title, subtitle, path }) => (
+  <div className="flex justify-between">
     <h1 className={ `font-default text-xl text-black+ ${path ? 'normal-case' : 'uppercase'}` }>
       { title }
     </h1>
@@ -18,5 +18,5 @@ export const Header: FC<IProps> = ({ title, subtitle, path }) => (
         { subtitle }
       </h2>
     ) }
-  </header>
+  </div>
 );

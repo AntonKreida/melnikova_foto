@@ -9,7 +9,7 @@ interface IProps {
 
 
 export const Container: FC<IProps> = ({ children }) => (
-  <div className="flex h-screen w-screen overflow-y-auto">
+  <div className="flex h-screen w-screen overflow-hidden">
     <Sidebar />
     { children }
   </div>

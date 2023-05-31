@@ -36,7 +36,8 @@ module.exports = {
       lg: ['32px', '40px'],
       xl: ['36px', '46px'],
       sub: ['24px', '20px'],
-      liBase: ['14px', '16px']
+      subMax: ['24px', '30px'],
+      liBase: ['14px', '16px'],
     },
     letterSpacing: {
       subtitle: ".7em"

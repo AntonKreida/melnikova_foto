@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { headerTitles, IHeaderTitles } from '@lib';
 import { ButtonUp } from '@shared';
 
-import { Header } from '../header';
+import { HeaderTitles } from '../header-titles';
 
 
 interface IProps {
@@ -30,13 +30,7 @@ export const Main: FC<IProps> = ({ children, titlePage }) => {
     });
   }, []);
 
-  const getNormalCase = () => {
-    if (path === 'lookbook') {
-      return true;
-    }
-
-    return false;
-  };
+  const getNormalCase = () => false;
 
   const handlerClickUpScrollPage = () => {
     window.scrollTo({
@@ -46,9 +40,9 @@ export const Main: FC<IProps> = ({ children, titlePage }) => {
   };
 
   return (
-    <main className="ml-[25%] flex h-full w-full flex-col overflow-hidden pb-14 pl-12 pt-40">
+    <main className="ml-[25%] flex h-full w-full flex-col overflow-y-auto pb-14 pl-12 pt-40">
       <div className="relative flex h-full flex-col gap-16">
-        <Header
+        <HeaderTitles
           path={ getNormalCase() }
           subtitle={ titlesPaths.subtitle }
           title={ titlePage || titlesPaths.title }
