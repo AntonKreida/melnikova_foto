@@ -1,1 +1,1 @@
-export { default } from './lookbook-page';
+export { default, getStaticProps } from './lookbook-page';
