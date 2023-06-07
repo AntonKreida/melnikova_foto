@@ -526,6 +526,7 @@
       0,
       "index-signature"
     ],
-    "tailwindcss/no-custom-classname": "error"
+    // https://github.com/francoismassart/eslint-plugin-tailwindcss/blob/master/docs/rules/no-custom-classname.md
+    "tailwindcss/no-custom-classname": "off"
   }
 }

@@ -8,13 +8,3 @@
         @apply before:absolute before:left-[-10px] before:top-0 before:h-full before:w-1 before:bg-black+ before:opacity-50
     }
 }
-
-// BASE
-@import "./base/base.scss";
-@import "./base/typography.scss";
-
-// LAYOUT
-@import "./layout/list.scss";
-
-
-

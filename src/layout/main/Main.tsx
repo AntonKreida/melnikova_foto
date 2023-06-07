@@ -1,5 +1,7 @@
 /* eslint-disable max-len */
-import { FC, useState, useEffect } from 'react';
+import {
+  FC, useState, useEffect, useRef
+} from 'react';
 import { useRouter } from 'next/router';
 
 import { headerTitles, IHeaderTitles } from '@lib';
@@ -19,10 +21,11 @@ export const Main: FC<IProps> = ({ children, titlePage }) => {
   const titlesPaths = headerTitles[path as keyof IHeaderTitles] !== undefined ? headerTitles[path as keyof IHeaderTitles] : headerTitles.default;
 
   const [backToUpButton, setBackToUpButton] = useState(false);
+  const refMain = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY < 100) {
+      if (window.scrollY > 200) {
         setBackToUpButton(true);
       } else {
         setBackToUpButton(false);
@@ -33,14 +36,17 @@ export const Main: FC<IProps> = ({ children, titlePage }) => {
   const getNormalCase = () => false;
 
   const handlerClickUpScrollPage = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+    refMain.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
     });
   };
 
   return (
-    <main className="ml-[25%] flex h-full w-full flex-col overflow-y-auto pb-14 pl-12 pt-40">
+    <main
+      ref={ refMain }
+      className={ `ml-[25%] flex  w-full flex-col overflow-y-auto overflow-x-hidden pb-14 pl-12 pt-40 ${path ? 'h-fit' : 'h-full'} ` }
+    >
       <div className="relative flex h-full flex-col gap-16">
         <HeaderTitles
           path={ getNormalCase() }
@@ -48,9 +54,8 @@ export const Main: FC<IProps> = ({ children, titlePage }) => {
           title={ titlePage || titlesPaths.title }
         />
         { children }
-        { backToUpButton && <ButtonUp text="Назад" onClick={ handlerClickUpScrollPage } /> }
+        { (backToUpButton && path) && <ButtonUp onClick={ handlerClickUpScrollPage } /> }
       </div>
-
     </main>
   );
 };

@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ru">
         <Head />
-        <body>
+        <body className="overflow-x-hidden scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-gray-500 scrollbar-track-rounded-md scrollbar-thumb-rounded-md active:scrollbar-thumb-gray-400">
           <Main />
           <NextScript />
         </body>

@@ -1,22 +1,19 @@
 import React, { FC } from 'react';
-
-import UndoIcon from '@public/assets/icon/undo.svg';
+import { ArrowUpIcon } from '@heroicons/react/24/solid';
 
 
 interface IProps {
   onClick: React.MouseEventHandler;
-  text: string;
 }
 
 
-export const ButtonUp: FC<IProps> = ({ onClick, text }) => (
+export const ButtonUp: FC<IProps> = ({ onClick }) => (
   <button
-    className="group absolute right-8 top-0 flex w-fit translate-y-[50%] cursor-pointer items-center gap-1 font-med uppercase text-gray+ transition-all hover:text-gray-400 active:scale-[0.8]"
+    className="group fixed bottom-10 right-8 flex h-12 w-12 translate-y-[50%] cursor-pointer items-center justify-center gap-1 rounded-full border border-solid border-black+ bg-white font-med uppercase text-gray+ shadow-inner transition-all hover:text-gray-400 active:scale-[0.8]"
     type="button"
     onClick={ onClick }
   >
-    { text }
-    <UndoIcon className="h-[20px] w-[20px] fill-gray+ transition-all group-hover:fill-gray-400" />
+    <ArrowUpIcon className="h-full w-[20px] fill-black+ transition-all group-hover:fill-gray-400" />
   </button>
 
 );
