@@ -28,6 +28,15 @@
             ],
             "@components": [
                 "./src/components/"
+            ],
+            "@interface": [
+                "./src/interface/"
+            ],
+            "@api": [
+                "./src/api/"
+            ],
+            "@api/*": [
+                "./src/api/*"
             ]
         },
     },

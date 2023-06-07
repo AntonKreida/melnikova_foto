@@ -4,7 +4,8 @@ import {
 } from 'react';
 import { useRouter } from 'next/router';
 
-import { headerTitles, IHeaderTitles } from '@lib';
+import { headerTitles } from '@lib';
+import { IHeaderTitles } from '@/interface';
 import { ButtonUp } from '@shared';
 import { HeaderTitles } from '@layout/header-titles';
 
