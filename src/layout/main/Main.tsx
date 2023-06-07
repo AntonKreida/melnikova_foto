@@ -6,8 +6,7 @@ import { useRouter } from 'next/router';
 
 import { headerTitles, IHeaderTitles } from '@lib';
 import { ButtonUp } from '@shared';
-
-import { HeaderTitles } from '../header-titles';
+import { HeaderTitles } from '@layout/header-titles';
 
 
 interface IProps {
@@ -45,7 +44,7 @@ export const Main: FC<IProps> = ({ children, titlePage }) => {
   return (
     <main
       ref={ refMain }
-      className={ `ml-[25%] flex  w-full flex-col overflow-y-auto overflow-x-hidden pb-14 pl-12 pt-40 ${path ? 'h-fit' : 'h-full'} ` }
+      className={ `ml-[25%] flex w-full flex-col overflow-y-auto overflow-x-hidden pb-14 pl-12 pt-40 ${path && path !== 'about' ? 'h-fit' : 'h-full'} ` }
     >
       <div className="relative flex h-full flex-col gap-16">
         <HeaderTitles
