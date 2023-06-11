@@ -1,5 +1,5 @@
 import Img from '@public/assets/images/itm.jpg';
-import { ILookbooks } from '@/interface';
+import { ILookbooks } from '@interface';
 
 
 export const lookbooksList: ILookbooks[] = [

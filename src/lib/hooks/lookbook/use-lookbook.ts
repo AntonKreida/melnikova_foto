@@ -8,6 +8,6 @@ export const useLookbook = () => {
   const { data } = useSwr(SWR_KEYS.lookbook, getLookbooksList);
 
   return {
-    lookbooks: data
+    lookbooks: data || null
   };
 };

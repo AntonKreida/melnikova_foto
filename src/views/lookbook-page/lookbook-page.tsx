@@ -4,7 +4,6 @@ import { GetStaticProps } from 'next';
 
 import { Marking, Main } from '@layout';
 import { GalleryItem } from '@/components';
-import Img from '@public/assets/images/itm.jpg';
 import { useLookbook, SWR_KEYS } from '@/lib';
 import { getLookbooksList } from '@/api';
 import { ILookbooks, IFallback } from '@/interface';
@@ -13,29 +12,24 @@ import { ILookbooks, IFallback } from '@/interface';
 const LookbookPage = () => {
   const { lookbooks } = useLookbook();
 
-  console.log(lookbooks);
-
+  if (!lookbooks) {
+    return null;
+  }
 
   return (
     <Main>
       <Marking grid>
-        <GalleryItem src={ Img } text="Алена" />
-        <GalleryItem src={ Img } text="Алена" />
-        <GalleryItem src={ Img } text="Алена" />
-        <GalleryItem src={ Img } text="Алена" />
-        <GalleryItem src={ Img } text="Алена" />
+        { lookbooks?.map((lookbook) => (
+          <GalleryItem
+            key={ lookbook.id }
+            src={ lookbook.img }
+            title={ lookbook.title }
+          />
+        )) }
       </Marking>
     </Main>
   );
 };
-
-export const LookbookPageFallback = (
-  { fallback }: IFallback<ILookbooks>
-) => (
-  <SWRConfig value={{ fallback }}>
-    <LookbookPage />
-  </SWRConfig>
-);
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
@@ -59,5 +53,21 @@ export const getStaticProps: GetStaticProps = async () => {
     throw error;
   }
 };
+
+export const LookbookPageFallback = (
+  { fallback, errorMessage }: IFallback<ILookbooks, string>
+) => {
+  if (errorMessage) {
+    return null;
+  }
+
+
+  return (
+    <SWRConfig value={{ fallback }}>
+      <LookbookPage />
+    </SWRConfig>
+  );
+};
+
 
 export default LookbookPageFallback;
